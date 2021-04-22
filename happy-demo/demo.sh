@@ -16,11 +16,11 @@ echo "Setting up for the demo"
 
 app_route="${APP_HOSTNAME}.${APP_DOMAIN}"
 
-open $this_directory/watch.command
-
 pushd $this_directory/sample-app
   cf push my-app --var route=$app_route
 popd
+
+open $this_directory/watch.command
 
 source ${DEMO_MAGIC_REDUX_PATH}/demo-magic.sh 
 
@@ -52,8 +52,6 @@ pe "cf push --help"
 pushd $this_directory/sample-app > /dev/null
   pe "cf push my-app --strategy rolling --var route=${APP_HOSTNAME}.${APP_DOMAIN} -i 10"
 popd > /dev/null
-
-open "https://${app_route}"
 
 wait
 end_demo
