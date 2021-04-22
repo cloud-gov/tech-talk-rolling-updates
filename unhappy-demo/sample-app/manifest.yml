@@ -1,0 +1,20 @@
+---
+applications:
+- name: unhappy-appy
+  instances: 10
+  memory: 32M
+  disk_quota: 64M
+  routes:
+  - route: ((route))
+  buildpacks:
+  - go_buildpack
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
