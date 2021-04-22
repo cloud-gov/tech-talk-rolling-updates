@@ -1,0 +1,1 @@
+watch -n 0.5 cf app my-app
