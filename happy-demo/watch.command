@@ -1,1 +1,1 @@
-watch -n 0.5 cf app my-app
+watch -n 1 cf app my-app
